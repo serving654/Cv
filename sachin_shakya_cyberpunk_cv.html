@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachin Shakya — Cyberpunk CV</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+  :root{
+    --bg:#050509;
+    --panel:#0b0b12;
+    --cyan:#00f6ff;
+    --pink:#ff2bd6;
+    --lime:#b7ff00;
+    --text:#e8f7ff;
+    --muted:#8ca1ad;
+    --line:rgba(0,246,255,.22);
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 15% 10%, rgba(0,246,255,.08), transparent 28%),
+      radial-gradient(circle at 90% 20%, rgba(255,43,214,.07), transparent 25%),
+      linear-gradient(180deg,#030307,#07070c 50%,#020205);
+    color:var(--text);
+    font-family:Rajdhani,Arial,sans-serif;
+    min-height:100vh;
+  }
+
+  body:before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    background:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:100% 4px;
+    opacity:.35;
+  }
+
+  .wrap{max-width:1100px;margin:auto;padding:32px 20px 60px}
+  .terminal{
+    color:var(--lime);
+    font:600 12px/1.6 Orbitron,sans-serif;
+    letter-spacing:2px;
+    margin-bottom:12px;
+  }
+
+  header{
+    border:1px solid var(--line);
+    background:rgba(8,8,15,.84);
+    padding:32px;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 0 35px rgba(0,246,255,.06);
+  }
+  header:after{
+    content:"";
+    position:absolute;right:-80px;top:-80px;
+    width:220px;height:220px;
+    border:1px solid rgba(255,43,214,.35);
+    transform:rotate(45deg);
+  }
+
+  h1{
+    font:800 clamp(42px,8vw,82px)/.9 Orbitron,sans-serif;
+    margin:0;
+    text-transform:uppercase;
+    letter-spacing:-3px;
+    color:#fff;
+    text-shadow:3px 3px 0 rgba(255,43,214,.55), -2px -2px 0 rgba(0,246,255,.4);
+  }
+  .role{
+    color:var(--cyan);
+    font:600 17px Orbitron,sans-serif;
+    letter-spacing:3px;
+    margin:18px 0;
+  }
+  .intro{max-width:760px;color:#b8cbd4;font-size:18px;line-height:1.55}
+
+  .contact{
+    display:flex;flex-wrap:wrap;gap:10px;margin-top:22px
+  }
+  .chip{
+    border:1px solid rgba(255,43,214,.35);
+    padding:8px 12px;
+    color:#d9e7ed;
+    background:#090910;
+    font-weight:600;
+  }
+
+  main{display:grid;grid-template-columns:1.5fr .9fr;gap:18px;margin-top:18px}
+  section{
+    border:1px solid var(--line);
+    background:rgba(8,8,15,.88);
+    padding:24px;
+  }
+  h2{
+    margin:0 0 18px;
+    font:700 17px Orbitron,sans-serif;
+    letter-spacing:2px;
+    color:var(--cyan);
+    text-transform:uppercase;
+  }
+  h2:before{content:"// ";color:var(--pink)}
+  h3{margin:0;color:#fff;font-size:21px}
+  .meta{color:var(--pink);font-weight:700;letter-spacing:1px;margin:5px 0 9px}
+  p{color:#b9c9d0;font-size:16px;line-height:1.5;margin:8px 0}
+
+  .item{padding:0 0 20px;margin-bottom:20px;border-bottom:1px dashed rgba(140,161,173,.2)}
+  .item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+
+  .skills{display:flex;flex-wrap:wrap;gap:9px}
+  .skill{
+    border:1px solid rgba(183,255,0,.3);
+    color:#d9ff8a;
+    padding:7px 10px;
+    background:rgba(183,255,0,.035);
+    font-weight:600;
+  }
+
+  .bar{margin:14px 0}
+  .bar-top{display:flex;justify-content:space-between;color:#d8e7ed;font-weight:600}
+  .track{height:6px;background:#161820;margin-top:6px}
+  .fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--pink));box-shadow:0 0 10px rgba(0,246,255,.35)}
+
+  ul{padding-left:20px;margin:8px 0;color:#b9c9d0}
+  li{margin:7px 0;line-height:1.4}
+
+  .footer{
+    text-align:center;color:#637983;margin-top:22px;
+    font:500 11px Orbitron,sans-serif;letter-spacing:2px
+  }
+
+  @media(max-width:800px){main{grid-template-columns:1fr} header{padding:24px}}
+  @media print{
+    body{background:#050509}
+    .wrap{padding:0}
+    header,section{break-inside:avoid}
+  }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <header>
+    <div class="terminal">SYSTEM PROFILE // ONLINE // 2026</div>
+    <h1>Sachin<br>Shakya</h1>
+    <div class="role">ASPIRING SOFTWARE DEVELOPER · PYTHON · DJANGO</div>
+    <div class="intro">
+      A curious and persistent technology learner building practical software,
+      strengthening problem-solving skills, and exploring the intersection of
+      Python, web development, data, and automation.
+    </div>
+    <div class="contact">
+      <span class="chip">INDIA</span>
+      <span class="chip">PYTHON</span>
+      <span class="chip">DJANGO</span>
+      <span class="chip">HTML / CSS</span>
+      <span class="chip">PROBLEM SOLVING</span>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <section>
+        <h2>Profile</h2>
+        <p>
+          Detail-oriented learner with hands-on experience developing a
+          Django-based Hostel Management System. Comfortable learning from
+          documentation, debugging setup issues, and turning concepts into
+          working features. Currently expanding skills across Python,
+          web development, data analysis, and software engineering.
+        </p>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Projects</h2>
+
+        <div class="item">
+          <h3>Hostel Management System</h3>
+          <div class="meta">DJANGO · PYTHON · HTML · CSS · SQLITE</div>
+          <p>
+            A web application concept for managing hostel operations,
+            including student records and administrative workflows.
+          </p>
+          <ul>
+            <li>Built around Django's URL routing, applications, models and admin interface.</li>
+            <li>Implemented student-management workflow concepts and authentication/admin access.</li>
+            <li>Debugged local development, virtual-environment and routing issues.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>Data & Python Learning Lab</h3>
+          <div class="meta">PYTHON · NUMPY · PANDAS · MATPLOTLIB</div>
+          <p>
+            A growing collection of practice work focused on numerical
+            computing, data manipulation and visualization.
+          </p>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Education</h2>
+        <div class="item">
+          <h3>Student / Early-Career Technology Track</h3>
+          <div class="meta">INDIA · CURRENT</div>
+          <p>
+            Building a foundation in programming, quantitative reasoning,
+            web development and computer applications through structured
+            self-learning and project work.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <section>
+        <h2>Core Stack</h2>
+
+        <div class="bar">
+          <div class="bar-top"><span>Python</span><span>85%</span></div>
+          <div class="track"><div class="fill" style="width:85%"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar-top"><span>Django</span><span>75%</span></div>
+          <div class="track"><div class="fill" style="width:75%"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar-top"><span>HTML / CSS</span><span>80%</span></div>
+          <div class="track"><div class="fill" style="width:80%"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar-top"><span>Pandas</span><span>65%</span></div>
+          <div class="track"><div class="fill" style="width:65%"></div></div>
+        </div>
+        <div class="bar">
+          <div class="bar-top"><span>NumPy</span><span>60%</span></div>
+          <div class="track"><div class="fill" style="width:60%"></div></div>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">Python</span>
+          <span class="skill">Django</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Git</span>
+          <span class="skill">Debugging</span>
+          <span class="skill">Data Analysis</span>
+          <span class="skill">Problem Solving</span>
+          <span class="skill">Learning Agility</span>
+        </div>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Current Mission</h2>
+        <ul>
+          <li>Build stronger full-stack foundations.</li>
+          <li>Turn learning into deployable projects.</li>
+          <li>Improve Python and Django depth.</li>
+          <li>Develop data-analysis capability.</li>
+          <li>Prepare for real-world software roles.</li>
+        </ul>
+      </section>
+
+      <section style="margin-top:18px">
+        <h2>Interests</h2>
+        <div class="skills">
+          <span class="skill">Software</span>
+          <span class="skill">Web Tech</span>
+          <span class="skill">Data</span>
+          <span class="skill">Automation</span>
+          <span class="skill">Technology</span>
+          <span class="skill">Competitive Exams</span>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="footer">END OF PROFILE // BUILD 2026.09 // CLASSIFIED: PUBLIC</div>
+</div>
+</body>
+</html>
